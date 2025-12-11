@@ -130,9 +130,11 @@ function updateDonutChart(currentTickets){
 function filterRegion(regionSelected){
   if(['','地區搜尋'].includes(regionSelected)){
     renderTicketCardArea(allTicketsJson);
+    updateDonutChart(allTicketsJson);
   }else{
     let ticketsSelected = allTicketsJson.filter(ticket => ticket.area === regionSelected);
     renderTicketCardArea(ticketsSelected);
+    updateDonutChart(ticketsSelected);
   }
   
 };
