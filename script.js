@@ -46,8 +46,6 @@ const AllAlertMessageFields = document.querySelectorAll('.alert-message');
 
 
 
-
-
 function renderTicketCardArea(ticketsToRender){
   let renderNum = ticketsToRender.length;
   FilterResultArea.textContent = `本次搜尋共 ${renderNum} 筆資料`;
@@ -119,7 +117,8 @@ function updateDonutChart(currentTickets){
       width: 12  
     },
     size: {
-      width:192,
+      width:182,
+      height:212
       
     }
   });
