@@ -26,7 +26,6 @@ async function getAllTicketsJson() {
     let res = await axios.get(allTicketsUrl);
     allTicketsJson = res.data.data;
     renderTicketCardsArea(allTicketsJson);
-    updateDonutChart(allTicketsJson);
   } catch (error) {
     console.log(error);
   }
@@ -158,6 +157,7 @@ function checkRequiredFields() {
 
   return isFinished;
 }
+
 
 function makeNewCard() {
   let currentTicketsNum = allTicketsJson.length;
